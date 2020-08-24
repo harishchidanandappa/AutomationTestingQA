@@ -1,0 +1,25 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class BasicAuthentication_Chrome 
+{
+    public static void main(String[] args) 
+    {
+        System.setProperty("webdriver.chrome.driver", "C:\\Utility\\BrowserDrivers\\chromedriver.exe");
+
+Webdriver driver=new ChromeDriver();
+driver.manage().window().maximize();
+
+driver.get(“https://the-internet.herokuapp.com/basic_auth”);
+driver.findElement(By.id(“username”));
+WebElement username=driver.findElement(By.id(“username”));
+
+driver.findElement(By.id(“password”));
+ WebElement password=driver.findElement(By.id(“password”)); 
+
+WebElement login=driver.findElement(By.xpath("//button[text()='Sign in']")); 
+  username.sendKeys("example@gmail.com"); password.sendKeys("password"); 
+  login.click(); String actualUrl="https://www.linkedin.com/feed/"; 
+  String expectedUrl= driver.getCurrentUrl(); if(actualUrl.equalsIgnoreCase(expectedUrl)) { 
+  System.out.println("Test passed"); } else { System.out.println("Test failed"); } }   }
