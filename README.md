@@ -14,3 +14,4 @@ Inorder to track the results of the test we use an open-source Java reporting li
 
 We have created tests for basic authentication of a login page,to find all the broken images in a webpage,to find the max value of the slider in a webpage, to hover over pictures on a webpage.
 The Test scripts use the Selenium WebDriver to create WebDriver Managers(ChromeDriveManager,IEdriveManager etc)for them and run the tests succesfully.
+In the TestScript the WebDriver instance is created,and then it navigates to the url which inturn locates an HTML element of a Webpage using WebElement.The required action is performed on the HTML element in the browser and then run the test using TestNG and record the results and conclude the test.  
